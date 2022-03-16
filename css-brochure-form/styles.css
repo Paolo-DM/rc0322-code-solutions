@@ -1,0 +1,71 @@
+* {
+  font-family: "Brandon Grotesque", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: AtlasGrotesk, sans-serif;
+  color: orangered;
+}
+
+button {
+  border-radius: 18px;
+  color: white;
+  background-color: orangered;
+  padding: 5px 15px;
+  font-size: 75%;
+  border-style: none;
+  position: relative;
+  right: -165px;
+}
+
+select {
+  background-color: #f5f4f5;
+}
+
+input,
+select {
+  width: 400px;
+  border-radius: 3px;
+  border-color: lightgrey;
+  border-style: solid;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input::placeholder {
+  text-indent: 5px;
+}
+
+form {
+  text-align: center;
+  margin: auto;
+}
+
+div {
+  margin-bottom: 8px;
+}
+
+label {
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.engineers-label {
+  margin-right: 85px;
+}
+
+.location-label {
+  margin-right: 275px;
+}
+
+.name-label {
+  margin-right: 370px;
+}
+
+.email-label {
+  margin-right: 320px;
+}
