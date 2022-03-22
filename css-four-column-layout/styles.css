@@ -1,0 +1,46 @@
+* {
+  font-family: Barlow, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr 0.25fr;
+  grid-template-rows: auto 700px;
+  gap: 2%;
+  background-color: #f7f8fa;
+}
+
+.icon {
+  width: 25%;
+}
+
+.row-title {
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-1 {
+  grid-column: 2/3;
+}
+
+.col-2 {
+  grid-column: 3/4;
+}
+
+.col-3 {
+  grid-column: 4/5;
+}
+
+.col-4 {
+  grid-column: 5/6;
+}
