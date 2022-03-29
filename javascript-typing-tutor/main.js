@@ -22,7 +22,16 @@ function checkInput(event) {
     $spanElements[i].className = 'current wrong';
     accuracy--;
   }
-  $accuracy.textContent = (percentage(accuracy, $spanElements.length));
+
+  if (percentage(accuracy, $spanElements.length) < 35) {
+    $accuracy.className = 'accuracy low';
+  } else if (percentage(accuracy, $spanElements.length) < 65) {
+    $accuracy.className = 'accuracy mid';
+  } else {
+    $accuracy.className = 'accuracy high';
+  }
+
+  $accuracy.textContent = (percentage(accuracy, $spanElements.length) + '%');
 }
 
 function percentage(partialValue, totalValue) {

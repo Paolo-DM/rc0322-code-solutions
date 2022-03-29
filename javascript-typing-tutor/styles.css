@@ -51,3 +51,15 @@ span {
 .wrong {
   color: red;
 }
+
+.accuracy.low {
+  color: red;
+}
+
+.accuracy.mid {
+  color: orange;
+}
+
+.accuracy.high {
+  color: #19cd1b;
+}
