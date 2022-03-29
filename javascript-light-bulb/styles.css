@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #252525;
+  box-shadow: 0 -15px black;
+}
+
+.container.turn-off {
+  background-color: #111;
+}
+
+.circle.turn-on {
+  background-color: #faea84;
+  box-shadow: 0 0 20px #faea84;
+}
+
+.container.turn-on {
+  background-color: #fef9f1;
+}
