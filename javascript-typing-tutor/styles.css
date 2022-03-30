@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  width: 30px;
+  height: 55px;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.play-again {
+  background-color: darkcyan;
+  padding: 5px 30px;
+  font-size: large;
+  font-weight: 800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.current {
+  color: black;
+  border-bottom: 4px solid;
+}
+
+.correct {
+  color: #19cd1b;
+}
+
+.wrong {
+  color: red;
+}
+
+.accuracy.low {
+  color: red;
+}
+
+.accuracy.mid {
+  color: orange;
+}
+
+.accuracy.high {
+  color: #19cd1b;
+}
+
+button:hover {
+  cursor: pointer;
+}
