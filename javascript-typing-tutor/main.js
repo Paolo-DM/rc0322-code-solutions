@@ -23,15 +23,16 @@ function checkInput(event) {
     accuracy--;
   }
 
-  if (percentage(accuracy, $spanElements.length) < 35) {
+  var percentageAccuracy = percentage(accuracy, $spanElements.length);
+  if (percentageAccuracy < 35) {
     $accuracy.className = 'accuracy low';
-  } else if (percentage(accuracy, $spanElements.length) < 65) {
+  } else if (percentageAccuracy < 65) {
     $accuracy.className = 'accuracy mid';
   } else {
     $accuracy.className = 'accuracy high';
   }
 
-  $accuracy.textContent = (percentage(accuracy, $spanElements.length) + '%');
+  $accuracy.textContent = (percentageAccuracy + '%');
 }
 
 function percentage(partialValue, totalValue) {
