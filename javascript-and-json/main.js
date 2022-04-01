@@ -19,5 +19,8 @@ console.log('Array of books:', books, 'typeof:', typeof books);
 var jsonBooks = JSON.stringify(books);
 console.log('JSON books:', jsonBooks, '\ntypeof JSON books:', typeof jsonBooks);
 
-var parsedJsonBooks = JSON.parse(jsonBooks);
-console.log('parsed JSON Books:', parsedJsonBooks, '\ntypeof:', typeof parsedJsonBooks);
+var studentString = '{ "Number id": "12345678","name": "Ada Lovelace"}';
+console.log('studentString:', studentString, 'typeof studentString:', typeof studentString);
+
+var parsedStudent = JSON.parse(studentString);
+console.log('parsed studentString:', parsedStudent, '\ntypeof parsedStudent:', typeof parsedStudent);
