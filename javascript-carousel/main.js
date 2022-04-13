@@ -30,7 +30,7 @@ function selectDot(id) {
   for (var i = 0; i < $progressDots.length; i++) {
     $progressDots[i].className = 'dot';
   }
-  $progressDots[id].classList.toggle('selected');
+  $progressDots[id].classList.add('selected');
   pauseResumeInterval();
 }
 
