@@ -1,3 +1,3 @@
-const multiply = (a, b) => parseInt(a) * parseInt(b);
+const multiply = (a, b) => a * b;
 
-module.exports = multiply;
+exports.multiply = multiply;

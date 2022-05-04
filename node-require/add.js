@@ -1,3 +1,3 @@
-const add = (a, b) => parseInt(a) + parseInt(b);
+const add = (a, b) => a + b;
 
-module.exports = add;
+exports.add = add;

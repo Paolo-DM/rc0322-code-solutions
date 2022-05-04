@@ -1,3 +1,3 @@
-const divide = (a, b) => parseInt(a) / parseInt(b);
+const divide = (a, b) => a / b;
 
-module.exports = divide;
+exports.divide = divide;
