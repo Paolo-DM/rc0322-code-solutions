@@ -1,0 +1,24 @@
+.psw-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.2rem 0;
+}
+
+.error {
+  color: red;
+}
+
+.check {
+  color: green;
+}
+
+.check,
+.error {
+  font-size: 1.6rem;
+}
+
+.error-message {
+  color: red;
+  margin: 0;
+}
