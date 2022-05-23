@@ -1,0 +1,56 @@
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 50%);
+  z-index: 2;
+}
+
+.drawer-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.background-image {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+.app-drawer {
+  z-index: 3;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+}
+
+.app-drawer h3,
+.games-list a {
+  padding: 0.3rem 0.7rem;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.app-drawer a:hover {
+  background-color: #e6e4e6;
+}
