@@ -1,0 +1,28 @@
+* {
+  font-family: Raleway, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding: 1rem;
+  border: 3px solid black;
+  margin: 0.2rem 0;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.topics-container {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.content {
+  background-color: #fff;
+}
