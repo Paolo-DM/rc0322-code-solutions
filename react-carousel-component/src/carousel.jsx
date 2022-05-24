@@ -3,7 +3,6 @@ import React from 'react';
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
-    this.images = props.images;
     this.state = {
       selectedImg: 1
     };
@@ -24,8 +23,8 @@ class Carousel extends React.Component {
 
   renderDots() {
     const out = [];
-    for (let i = 0; i < this.images.length; i++) {
-      out.push(<i key={this.images[i].id} className={this.state.selectedImg === i + 1 ? 'ph-circle-fill' : 'ph-circle-bold'} onClick={() => this.handleClick(i + 1)} ></i>);
+    for (let i = 0; i < this.props.images.length; i++) {
+      out.push(<i key={this.props.images[i].id} className={this.state.selectedImg === i + 1 ? 'ph-circle-fill' : 'ph-circle-bold'} onClick={() => this.handleClick(i + 1)} ></i>);
     }
     return out;
   }
@@ -36,7 +35,7 @@ class Carousel extends React.Component {
   }
 
   rightClick() {
-    if (this.state.selectedImg === this.images.length) {
+    if (this.state.selectedImg === this.props.images.length) {
       this.setState({ selectedImg: 1 });
     } else {
       this.setState({ selectedImg: this.state.selectedImg + 1 });
@@ -46,7 +45,7 @@ class Carousel extends React.Component {
 
   leftClick() {
     if (this.state.selectedImg === 1) {
-      this.setState({ selectedImg: this.images.length });
+      this.setState({ selectedImg: this.props.images.length });
     } else {
       this.setState({ selectedImg: this.state.selectedImg - 1 });
     }
@@ -59,9 +58,9 @@ class Carousel extends React.Component {
     return (
       <div className='container'>
         <i className="ph-caret-left-bold left-arrow" onClick={this.leftClick}></i>
-        <img src={this.images[selImg - 1].url}></img>
+        <img src={this.props.images[selImg - 1].url}></img>
         <i className="ph-caret-right-bold right-arrow" onClick={this.rightClick}></i>
-        <div key={this.images.id} className='progress-dots'>
+        <div key={this.props.images.id} className='progress-dots'>
           {this.renderDots()}
         </div>
       </div>
