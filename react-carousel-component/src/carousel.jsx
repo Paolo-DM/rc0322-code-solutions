@@ -22,11 +22,19 @@ class Carousel extends React.Component {
   }
 
   renderDots() {
+    /*
     const out = [];
     for (let i = 0; i < this.props.images.length; i++) {
       out.push(<i key={this.props.images[i].id} className={this.state.selectedImg === i + 1 ? 'ph-circle-fill' : 'ph-circle-bold'} onClick={() => this.handleClick(i + 1)} ></i>);
     }
     return out;
+    */
+    return this.props.images.map(image => {
+      return <i key={image.id}
+                className={this.state.selectedImg === image.id ? 'ph-circle-fill' : 'ph-circle-bold'}
+                onClick = {() => this.handleClick(image.id)}>
+            </i>;
+    });
   }
 
   handleClick(id) {
