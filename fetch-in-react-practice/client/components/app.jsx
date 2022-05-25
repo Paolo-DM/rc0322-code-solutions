@@ -82,7 +82,7 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
 
-    const todosCopy = this.state.todos;
+    const todosCopy = this.state.todos.slice();
     const matchingIndex = todosCopy.findIndex(todo => todo.todoId === todoId);
     const { isCompleted } = todosCopy[matchingIndex];
     const newStatus = { isCompleted: !isCompleted };
@@ -96,7 +96,7 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(patchedTodo => {
-        const prevTodos = this.state.todos;
+        const prevTodos = this.state.todos.slice();
         prevTodos[matchingIndex] = patchedTodo;
         this.setState({ todos: prevTodos });
       })
