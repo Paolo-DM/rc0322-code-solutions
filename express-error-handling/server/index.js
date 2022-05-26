@@ -27,12 +27,7 @@ app.get('/api/grades', (req, res, next) => {
       const grades = result.rows;
       res.json(grades);
     })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({
-        error: 'an unexpected error occurred'
-      });
-    });
+    .catch(err => next(err));
 });
 
 app.post('/api/grades', (req, res, next) => {
@@ -61,10 +56,7 @@ app.post('/api/grades', (req, res, next) => {
 app.get('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = Number(req.params.gradeId);
   if (!Number.isInteger(gradeId) || gradeId < 1) {
-    res.status(400).json({
-      error: 'grade must be a positive integer'
-    });
-    return;
+    throw new ClientError(400, 'grade must be a positive integer');
   }
   const sql = `
     select *
@@ -92,10 +84,7 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   const { name, course } = req.body;
   const score = Number(req.body.score);
   if (!Number.isInteger(score) || score < 0 || score > 100) {
-    res.status(400).json({
-      error: 'score must be an integer between 0 and 100'
-    });
-    return;
+    throw new ClientError(400, 'score must be an integer between 0 and 100');
   }
   if (!name || !course) {
     throw new ClientError(400, 'name, course, and score are required fields');
